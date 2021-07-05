@@ -5,8 +5,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import ModelConstructor from '~/helpers/Egal'
 
-export default Vue.extend({})
+export default Vue.extend({
+  asyncData(context) {
+    context.app.$observer('modelName', 'emit-event-name')
+  },
+})
 </script>
 
 <style>
