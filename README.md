@@ -52,16 +52,16 @@
 [Interface Service]: https://github.com/egal/egal-interface-service
 [Postgres]: https://github.com/egal/postgres
 
-[Docs Status]: https://img.shields.io/website?url=https%3A%2F%2Fsegal.github.io%2Fegal-docs%2F%23%2F
+[Docs Status]: https://img.shields.io/website?url=https%3A%2F%2Fegal.github.io%2Fegal-docs%2F%23%2F
 [Egal/Framework PHP Package Status]: https://img.shields.io/packagist/v/egal/framework?include_prereleases
-[Egal/Framework NPM Package Status]: https://img.shields.io/npm/v/@egalteam/egal
+[Egal/Framework NPM Package Status]: https://img.shields.io/npm/v/@egalteam/framework
 [Egal/Egal PHP Project Status]: https://img.shields.io/packagist/v/egal/egal?include_prereleases
 [Web Service Status]: https://img.shields.io/docker/v/egalbox/web-service?label=dockerhub
 [Auth Service Status]: https://img.shields.io/docker/v/egalbox/auth-service?label=dockerhub
 [Interface Service Status]: https://img.shields.io/docker/v/egalbox/interface-service?label=dockerhub
 [Postgres Status]: https://img.shields.io/docker/v/egalbox/postgres?label=dockerhub
 
-[Docs Status URL]: https://egal.github.io/egal-docs/#/
+[Docs Status URL]: https://egal.github.io/egal-docs/
 [Egal/Framework PHP Package Status URL]: https://packagist.org/packages/egal/framework
 [Egal/Framework NPM Package Status URL]: https://www.npmjs.com/package/@egalteam/egal
 [Egal/Egal PHP Project Status URL]: https://packagist.org/packages/egal/egal
