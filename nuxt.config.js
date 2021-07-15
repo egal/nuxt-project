@@ -37,6 +37,7 @@ export default {
     { src: '~assets/script/directives.js' },
     { src: '~/plugins/vue-upload-component.ts', mode: 'client' },
     { src: '~/plugins/vue-inputmask.ts', mode: 'client' },
+    {src: '~/plugins/observer.js', mode:'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
