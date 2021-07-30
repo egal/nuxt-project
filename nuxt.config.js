@@ -20,6 +20,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/base-url.config.js' },
+    { src: '~/plugins/axios.config.js' },
     // {src: '~/plugins/observer.js', mode:'client'}
   ],
 

@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import EgalConstructor from '../helpers/EgalWithoutPlugin'
+import EgalConstructor from '../helpers/EgalConstructor'
 
 export default Vue.extend({
   data() {

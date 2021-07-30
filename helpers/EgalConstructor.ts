@@ -1,3 +1,4 @@
+// @ts-ignore
 import { EventObserver, Model } from '@egalteam/framework/compile/index'
 
 export default class EgalConstructor extends Model {
@@ -26,16 +27,19 @@ export default class EgalConstructor extends Model {
     this.model = new Model(
       this.modelName,
       process.env.VUE_APP_USERNAME,
-      process.env.VUE_APP_PASSWORD,
+      process.env.VUE_APP_PASSWORD
     )
     this.model.setBaseUrl(process.env.API_BASE_URL, 'axios')
   }
 
   emitModelEvent() {
-    this.observer.subscribe(this.modelName, (data:any, actionName:string, modelName:string) => {
-      let receivedData = [data[0], actionName, modelName]
-      this.listenerFunction(receivedData)
-    })
+    this.observer.subscribe(
+      this.modelName,
+      (data: any, actionName: string, modelName: string) => {
+        const receivedData = [data[0], actionName, modelName]
+        this.listenerFunction(receivedData)
+      }
+    )
   }
 
   unsubscribe() {
