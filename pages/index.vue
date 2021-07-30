@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-  </div>
+  <div class="container"></div>
 </template>
 
 <script lang="ts">
@@ -10,17 +9,21 @@ import EgalConstructor from '../helpers/EgalWithoutPlugin'
 export default Vue.extend({
   data() {
     return {
-      exampleModel: ''
+      exampleModel: null,
     }
   },
   mounted() {
-    const exampleListener = (data) => {
-    }
-    this.exampleModel = new EgalConstructor('Example', 'exampleEmit', this.$root, exampleListener)
+    const exampleListener = (data) => {}
+    this.exampleModel = new EgalConstructor(
+      'Example',
+      'exampleEmit',
+      this.$root,
+      exampleListener
+    )
   },
   beforeDestroy() {
     this.exampleModel.unsubscribe()
-  }
+  },
 })
 </script>
 

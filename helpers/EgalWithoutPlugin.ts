@@ -8,7 +8,12 @@ export default class EgalConstructor extends Model {
   listenerFunction: Function
   observer: EventObserver = EventObserver.getInstance()
 
-  constructor(modelName:string, emitName:string, $root:any, listenerFunction:Function) {
+  constructor(
+    modelName: string,
+    emitName: string,
+    $root: any,
+    listenerFunction: Function
+  ) {
     super(modelName, process.env.VUE_APP_USERNAME, process.env.VUE_APP_PASSWORD)
     this.modelName = modelName
     this.emitName = emitName
