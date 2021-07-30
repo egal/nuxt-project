@@ -5,12 +5,22 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ModelConstructor from '~/helpers/Egal'
+import EgalConstructor from '../helpers/EgalWithoutPlugin'
 
 export default Vue.extend({
-  asyncData(context) {
-    context.app.$observer('modelName', 'emit-event-name')
+  data() {
+    return {
+      exampleModel: ''
+    }
   },
+  mounted() {
+    const exampleListener = (data) => {
+    }
+    this.exampleModel = new EgalConstructor('Example', 'exampleEmit', this.$root, exampleListener)
+  },
+  beforeDestroy() {
+    this.exampleModel.unsubscribe()
+  }
 })
 </script>
 
