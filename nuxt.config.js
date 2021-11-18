@@ -20,9 +20,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/base-url.config.js' },
-    { src: '~/plugins/axios.config.js' },
-    // {src: '~/plugins/observer.js', mode:'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,6 +29,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    ['@nuxtjs/dotenv', { systemvars: true }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
