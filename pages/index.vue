@@ -1,61 +1,40 @@
 <template>
-  <div class="container"></div>
+  <div></div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import EgalConstructor from '../helpers/EgalConstructor'
+import egalConstructor from '../helpers/EgalActionConstructor'
 
 export default Vue.extend({
   data() {
-    return {
-      exampleModel: null,
-    }
+    return {}
   },
   mounted() {
-    const exampleListener = (data) => {}
-    this.exampleModel = new EgalConstructor(
-      'Example',
-      'exampleEmit',
-      this.$root,
-      exampleListener
-    )
+  },
+  methods: {
+    /**
+     * Ниже приведен пример запроса на получение данных
+     * подробную информацию, о том, как формировать параметры для
+     * фильтрации, сортировки, пагинации и withs можно найти в документации Egal
+     * https://egal.github.io/egal-docs/#/client/filters_orders
+     */
+    getData() {
+      egalConstructor
+        .getItems('microservice name', 'model name')
+        .filter(['example filters'])
+        .withs(['example with'])
+        .order([['value', 'order']])
+        .setPagination('per page', 'current page')
+        .call()
+        .then((response) => {
+        }).catch((error) => {})
+    },
   },
   beforeDestroy() {
-    this.exampleModel.unsubscribe()
   },
 })
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style scoped>
 </style>

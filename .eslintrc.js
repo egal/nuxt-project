@@ -11,5 +11,11 @@ module.exports = {
   ],
   plugins: [],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'vue/attributes-order': 'off',
+    'vue/order-in-components': 'off',
+    'vue/camelcase': 'off',
+    'vue/import/order': 'off',
+    'ordered-imports': 'off',
+  },
 }
