@@ -10,8 +10,7 @@ export default Vue.extend({
   data() {
     return {}
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     /**
      * Ниже приведен пример запроса на получение данных
@@ -25,16 +24,14 @@ export default Vue.extend({
         .filter(['example filters'])
         .withs(['example with'])
         .order([['value', 'order']])
-        .setPagination('per page', 'current page')
+        .setPagination(10, 1)
         .call()
-        .then((response) => {
-        }).catch((error) => {})
+        .then((response) => {})
+        .catch((error) => {})
     },
   },
-  beforeDestroy() {
-  },
+  beforeDestroy() {},
 })
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
